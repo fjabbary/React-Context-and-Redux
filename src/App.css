@@ -19,3 +19,7 @@
 .card-contact {
     background: rgb(248, 247, 247) !important;
 }
+
+.nav-item {
+    margin: 0 10px;
+}

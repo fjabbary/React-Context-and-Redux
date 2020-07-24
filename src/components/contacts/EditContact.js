@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 import { Consumer } from '../../context'
-import { v1 as uuid } from "uuid";
 import axios from 'axios';
 
-class AddContact extends Component {
+class EditContact extends Component {
     constructor(props) {
         super(props)
 
@@ -16,11 +15,23 @@ class AddContact extends Component {
         this.form = React.createRef();
     }
 
+    async componentDidMount() {
+        const id = this.props.match.params.id
+        const res = await axios.get(`https://jsonplaceholder.typicode.com/users/${id}`)
+        const oneUser = res.data
+        console.log(oneUser)
+        this.setState({
+            name: oneUser.name,
+            email: oneUser.email,
+            phone: oneUser.phone
+        })
+    }
+
     onChangeHandler = (e) => this.setState({
         [e.target.name]: e.target.value
     })
 
-    onSubmitHandler = (dispatch, e) => {
+    onSubmitHandler = async (dispatch, e) => {
         e.preventDefault();
         const { name, email, phone } = this.state
 
@@ -34,13 +45,26 @@ class AddContact extends Component {
                     phone
                 }
             }).then(res => {
-                console.log(res.data)
                 dispatch({
                     type: 'ADD_CONTACT',
                     payload: res.data
                 })
             })
         }
+
+        const updateContact = {
+            name,
+            email,
+            phone
+        }
+
+        const { id } = this.props.match.params;
+        const res = await axios.put(`https://jsonplaceholder.typicode.com/users/${id}`, updateContact)
+
+        dispatch({
+            type: 'UPDATE_CONTACT',
+            payload: res.data
+        })
 
         this.setState({
             name: '',
@@ -76,7 +100,7 @@ class AddContact extends Component {
                                         <label htmlFor="name">Phone:</label>
                                         <input type="text" name="phone" placeholder="Enter Phone..." className="form-control" value={phone} onChange={this.onChangeHandler} />
                                     </div>
-                                    <input type="submit" className="btn btn-primary btn-block" value="Add Contact" />
+                                    <input type="submit" className="btn btn-primary btn-block" value="Update Contact" />
                                 </form>
                             </div>
                         </div>
@@ -90,4 +114,4 @@ class AddContact extends Component {
     }
 }
 
-export default AddContact;
+export default EditContact;
