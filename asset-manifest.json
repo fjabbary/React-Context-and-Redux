@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/React-context-and-Redux/static/css/main.d0e4a177.chunk.css",
+    "main.js": "/React-context-and-Redux/static/js/main.6f3348b6.chunk.js",
+    "main.js.map": "/React-context-and-Redux/static/js/main.6f3348b6.chunk.js.map",
+    "runtime-main.js": "/React-context-and-Redux/static/js/runtime-main.a2bd9afd.js",
+    "runtime-main.js.map": "/React-context-and-Redux/static/js/runtime-main.a2bd9afd.js.map",
+    "static/css/2.85660a47.chunk.css": "/React-context-and-Redux/static/css/2.85660a47.chunk.css",
+    "static/js/2.5f5fcf87.chunk.js": "/React-context-and-Redux/static/js/2.5f5fcf87.chunk.js",
+    "static/js/2.5f5fcf87.chunk.js.map": "/React-context-and-Redux/static/js/2.5f5fcf87.chunk.js.map",
+    "index.html": "/React-context-and-Redux/index.html",
+    "precache-manifest.c14a53c799329757c4383c72fefecce5.js": "/React-context-and-Redux/precache-manifest.c14a53c799329757c4383c72fefecce5.js",
+    "service-worker.js": "/React-context-and-Redux/service-worker.js",
+    "static/css/2.85660a47.chunk.css.map": "/React-context-and-Redux/static/css/2.85660a47.chunk.css.map",
+    "static/css/main.d0e4a177.chunk.css.map": "/React-context-and-Redux/static/css/main.d0e4a177.chunk.css.map",
+    "static/js/2.5f5fcf87.chunk.js.LICENSE.txt": "/React-context-and-Redux/static/js/2.5f5fcf87.chunk.js.LICENSE.txt",
+    "static/media/font-awesome.min.css": "/React-context-and-Redux/static/media/fontawesome-webfont.fee66e71.woff"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.a2bd9afd.js",
+    "static/css/2.85660a47.chunk.css",
+    "static/js/2.5f5fcf87.chunk.js",
+    "static/css/main.d0e4a177.chunk.css",
+    "static/js/main.6f3348b6.chunk.js"
+  ]
+}
